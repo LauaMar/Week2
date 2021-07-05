@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "week2.Esercizio2Day1", "wee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "week2.Esercizio3Day1", "week2.Esercizio3Day1\week2.Esercizio3Day1.csproj", "{7595CCBE-3817-4ACF-BEE8-DFCB1ED6FDEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "week2.Esercizio4Day1", "MediaVoti\week2.Esercizio4Day1.csproj", "{B1A1F63F-24F9-4DE1-8C1F-644F376A2CF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7595CCBE-3817-4ACF-BEE8-DFCB1ED6FDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7595CCBE-3817-4ACF-BEE8-DFCB1ED6FDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7595CCBE-3817-4ACF-BEE8-DFCB1ED6FDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A1F63F-24F9-4DE1-8C1F-644F376A2CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A1F63F-24F9-4DE1-8C1F-644F376A2CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A1F63F-24F9-4DE1-8C1F-644F376A2CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A1F63F-24F9-4DE1-8C1F-644F376A2CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
