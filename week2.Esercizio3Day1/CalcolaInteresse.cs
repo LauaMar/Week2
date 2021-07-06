@@ -28,10 +28,10 @@ namespace week2.Esercizio3Day1
 
             //importoTotale = InteresseIterativo(numAnni, importoVincolato, percInteresse);
 
-            for (int i = 1; i <= numAnni; i++)
-            {
-                totale = InteresseRicorsivo(i);
-            }
+            //for (int i = 1; i <= numAnni; i++)
+            //{
+                totale = InteresseRicorsivo(numAnni);
+            //}
         }
 
         private static double InteresseRicorsivo(int numAnni)

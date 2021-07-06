@@ -20,42 +20,71 @@ namespace week2.Esercizio4Day1
             string nome;
             string cognome;
             double mediaVoti;
-            //IdentificaStudente(out nome, out cognome);
-            //mediaVoti = OperazioniPerMediaVoti();
-            mediaVoti = OperazioniPerMediaVotiRicorsiva();
+            IdentificaStudente(out nome, out cognome);
+
+            // programma iterativo
+            InserisciVotiEsami(out int[] votiEsami, out int numEsami);
+            mediaVoti = OperazioniPerMediaVoti(votiEsami, numEsami);
+
+            //programma ricorsivo
+            //int sommaVoti = 0;
+            //VerificaNumEsami(out int numEsami);
+            //for (int i = numEsami; i > 0; i--)
+            //{
+            //    sommaVoti = SommaVotiRicorsiva(i);
+            //}
+            //double media = (sommaVoti / numEsami);
+
         }
 
 
-        private static int SommaVotiRicorsiva(int[] votiEsami, int numEsami)
+        private static int SommaVotiRicorsiva(int numEsami)
         //private static int SommaVotiRicorsiva(int[] votiEsami)
         {
-
             int sommaVoti = 0;
-            //int numEsami = votiEsami.Length;
-            for (int i = numEsami; i > 0; i--)
+            int currVoto = 0;
+            for (int i = 0; i < numEsami; i++)
             {
-
-                if (i == 0)
+                Console.WriteLine($"Inserisci voto esame ({i + 1} di {numEsami}):");
+                while (!(int.TryParse(Console.ReadLine(), out currVoto) && currVoto >= 18 && currVoto <= 30))
                 {
-                    sommaVoti = votiEsami[i];
+                    Console.WriteLine("Hai inserito un voto sbagliato. ");
+                    Console.WriteLine("Il voto inserito deve essere compreso tra 18 e 30. Riprova:");
                 }
-                else 
+                //int numEsami = votiEsami.Length;
+
+                if (numEsami == 1)
                 {
-                    sommaVoti = votiEsami[i] + SommaVotiRicorsiva(votiEsami, (numEsami-1));
+                    sommaVoti = currVoto;
+                }
+                else
+                {
+                    sommaVoti = currVoto + SommaVotiRicorsiva((numEsami - 1));
                 }
             }
             return sommaVoti;
         }
-        private static double OperazioniPerMediaVotiRicorsiva()
-        {
-            //VerificaNumEsami(out int numEsami);
-            InserisciVotiEsami(out int[] votiEsami, out int numEsami);
+        //private static double OperazioniPerMediaVotiRicorsiva()
+        //{
+        //VerificaNumEsami(out int numEsami);
+        //InserisciVotiEsami(out int[] votiEsami, out int numEsami);
 
-            int sommaVoti = SommaVotiRicorsiva(votiEsami, numEsami);
-            double media = (sommaVoti/numEsami);
-            return media;
-        }
-       private static void VerificaNumEsami(out int numEsami)
+        //int sommaVoti = SommaVotiRicorsiva(votiEsami, numEsami);
+        //double media = (sommaVoti/numEsami);
+        //return media;
+        //}
+        //private static void VerificaNumeroEsami(out int numEsami)
+        //{
+        //    numEsami = 0;
+        //    Console.WriteLine($"Inserisci numero di esami sostenuti:");
+        //    while (!int.TryParse(Console.ReadLine(), out numEsami))
+        //    {
+        //        Console.WriteLine("Hai inserito un carattere sbagliato, riprova");
+        //    }
+
+        //}
+
+        private static void VerificaNumEsami(out int numEsami)
         {
             numEsami = 0;
             Console.WriteLine($"Inserisci numero di esami sostenuti:");
@@ -63,11 +92,10 @@ namespace week2.Esercizio4Day1
             {
                 Console.WriteLine("Hai inserito un carattere sbagliato, riprova");
             }
-        
         }
-        private static double OperazioniPerMediaVoti()
+        private static double OperazioniPerMediaVoti(int[] votiEsami, int numEsami)
         {
-            InserisciVotiEsami(out int[] votiEsami, out int numEsami);
+            //InserisciVotiEsami(out int[] votiEsami, out int numEsami);
             double media = CalcolaMediaVoti(votiEsami, numEsami);
             return media;
         }
@@ -75,11 +103,11 @@ namespace week2.Esercizio4Day1
         private static double CalcolaMediaVoti(int[] votiEsami, int numEsami)
         {
             int sommaVoti = 0;
-            for (int i = 0; i < numEsami; i++)
+            for (int i = 0; i < numEsami; i++) // si può usare anche il foreach
             {
                 sommaVoti = sommaVoti + votiEsami[i];
             }
-            double media = (sommaVoti/numEsami);
+            double media = (sommaVoti / numEsami);
             Console.WriteLine("Media: {0}", media);
             return media;
         }
