@@ -14,11 +14,11 @@ namespace Libreria
  
             Per il genere usare un enum
  
-            Sarà possibile inserire un nuovo libro, eliminare un libro, modificare un libro o cercare i libri per genere*/
+            Sarà possibile inserire un nuovo libro, eliminare un libro, modificare un libro, cercare i libri per genere e stampare tutti i libri*/
 
         static void Main(string[] args)
         {
-            
+            Menù.Start();
         }
     }
 }

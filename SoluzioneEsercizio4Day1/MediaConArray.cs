@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoluzioneEsercizio4Day1
 {
-   public class MediaConArray
+   public static class MediaConArray
     {
-        public void mediaArray()
+        public static void mediaArray()
         {
             Console.WriteLine("Inserisci il tuo nome:");
             string nome = Console.ReadLine();
@@ -47,7 +47,7 @@ namespace SoluzioneEsercizio4Day1
 
             double mediaVoti = somma / numeroDiEsami;
 
-
+            
         }
     }
 }
