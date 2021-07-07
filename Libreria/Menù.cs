@@ -12,14 +12,13 @@ namespace Libreria
         public static void Start()
         {
             int scelta = 5;
+
+            Console.WriteLine("Benvenuto in libreria!");
+
+            LibreriaManager.LeggiDaFile(); // facendo così, se il file non esiste il sistema genera una eccezione e si blocca
+                                           // bisogna controllare che il file esista
             while (scelta != 0)
             {
-
-                Console.WriteLine("Benvenuto in libreria!");
-
-                LibreriaManager.LeggiDaFile(); // facendo così, se il file non esiste il sistema genera una eccezione e si blocca
-                // bisogna controllare che il file esista
-
                 Console.WriteLine("Scegli l'operazione da svolgere:");
                 Console.WriteLine("Premi 1 per inserire un libro;");
                 Console.WriteLine("Premi 2 per eliminare un libro;");

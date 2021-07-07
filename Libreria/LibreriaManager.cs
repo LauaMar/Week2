@@ -19,6 +19,7 @@ namespace Libreria
             //File è una classe che fa parte della System.IO
             //Metodo exists a cui abbiamo passato la posizione e il nome del file (che è una stringa, il path)
             //Exists restituisce un booleano
+
             if (File.Exists(path))
             {
                 using (StreamReader sr = new StreamReader(path))
@@ -206,13 +207,35 @@ namespace Libreria
 
         public static Libro CercaLibro(string titolo)
         {
+            List<Libro> libriPerTitolo = new List<Libro>();
             foreach (Libro libro in libri)
             {
                 if (libro.Titolo == titolo)
                 {
-                    return libro;
+                    //return libro;
+                    libriPerTitolo.Add(libro);
                 }
             }
+            if(libriPerTitolo.Count==1)
+            {
+                return libriPerTitolo[0];
+            }
+            else if(libriPerTitolo.Count>1)
+            {
+                Console.WriteLine("Sono stati trovati più libri con lo stesso titolo.");
+                //StampaLibri(libriPerTitolo);
+                Console.WriteLine("Inserire autore");
+                string autoreLibroCercato = Console.ReadLine();
+                for(int i=0; i<libriPerTitolo.Count; i++)
+                {
+                    string autoreCurrLibro = libriPerTitolo[i].Autore;
+                    if(autoreCurrLibro == autoreLibroCercato)
+                    {
+                        return libriPerTitolo[i];
+                    }
+                }
+            }
+
             return null;
         }
 
