@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banca", "Banca\Banca.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RipassoDate", "RipassoDate\RipassoDate.csproj", "{3D200C31-48D3-4DFD-9301-07D3674D9EAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segreteria", "Segreteria\Segreteria.csproj", "{0D1D62B2-EFF5-4B81-80E0-247770899F29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{3D200C31-48D3-4DFD-9301-07D3674D9EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D200C31-48D3-4DFD-9301-07D3674D9EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D200C31-48D3-4DFD-9301-07D3674D9EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1D62B2-EFF5-4B81-80E0-247770899F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1D62B2-EFF5-4B81-80E0-247770899F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1D62B2-EFF5-4B81-80E0-247770899F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1D62B2-EFF5-4B81-80E0-247770899F29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
