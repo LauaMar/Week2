@@ -18,6 +18,10 @@ namespace Banca
                 Console.WriteLine("Seleziona l'operazione da compiere:");
                 Console.WriteLine("Premi 1 per Aprire un conto");
                 Console.WriteLine("Premi 2 per Chiudere un conto");
+                Console.WriteLine("Premi 3 per Filtrare i conti per tipo");
+                Console.WriteLine("Premi 4 per Visualizzare tutti i conti");
+                Console.WriteLine("Premi 5 per effettuare un prelievo");
+                Console.WriteLine("Premi 6 per Effettuare un versamento");
                 Console.WriteLine("Premi 0 per Uscire");
                 while(!int.TryParse(Console.ReadLine(), out operazione))
                 {
@@ -26,12 +30,25 @@ namespace Banca
                 switch (operazione)
                 {
                     case 0:
+                        BancaManager.SalvaSuFile();
                         break;
                     case 1:
-                        Utente.CreareConto();
+                        BancaManager.AggiungiConto();
                         break;
                     case 2:
-                        Utente.EliminareConto();
+                        BancaManager.EliminareConto();
+                        break;
+                    case 3:
+                        BancaManager.FiltraConti();
+                        break;
+                    case 4:
+                        BancaManager.MostraConti();
+                        break;
+                    case 5:
+                        BancaManager.EffettuaPrelievo();
+                        break;
+                    case 6:
+                        BancaManager.EffettuaVersamento();
                         break;
                     default:
                         Console.WriteLine("Hai inserito una opzione non valida, riprova:");

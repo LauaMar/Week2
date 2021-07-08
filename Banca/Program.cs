@@ -12,7 +12,16 @@ namespace Banca
          * TipoDiConto --> conto corrente -conto risparmio
          * Saldo
          * 
-         * un utente può creare o eliminare un conto */
+         * un utente può:
+         * -visualizzare tutti i conti -
+         * può creare o eliminare un conto 
+         * filtrare un tipo di conto.
+         * 
+         * per aprire un nuovo conto, l'importo minimo deve essere 100 
+         * un utente può effettuare un prelievo
+         * un utente può effettuare un versamento
+         * sul conto risparmio si può solamente versare, mentre sul conto corrente si può sia versare che prelevare
+         * quando un utente decide di uscire, i conti vengono salvati su file*/
 
         static void Main(string[] args)
         {
